@@ -18,13 +18,22 @@
 <body>
 <!-- Header -->
 <header>
-
+    <h1>POKEDEX</h1>
 </header>
 <!-- Main -->
 <main>
-<label for="input">ID Pokémon</label>
-    <input id="input" type="text" autocomplete="off" name="poke" placeholder="ID Pokemon">
-    <button id="button" aria-label="startSearch" type="button">GO</button>
+    <section>
+        <label for="input">ID Pokémon</label>
+        <input id="input" type="text" autocomplete="off" name="poke" placeholder="ID Pokemon">
+        <button id="button" aria-label="startSearch" type="button">GO</button>
+    </section>
+    <section>
+        <div id="pokeId" class="text-center"></div>
+        <div id="name" class="text-capitalize text-center"></div>
+        <div id="sprite"></div>
+        <div id="moves" class="text-center">Moves: </div>
+    </section>
+
 </main>
 
 <!-- Script -->
