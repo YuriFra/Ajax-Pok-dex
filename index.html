@@ -24,14 +24,16 @@
 <main>
     <section>
         <label for="input">ID Pokémon</label>
-        <input id="input" type="text" autocomplete="off" name="poke" placeholder="ID Pokemon">
+        <input id="input" type="text" autocomplete="off" name="poke" placeholder="ID or name">
         <button id="button" aria-label="startSearch" type="button">GO</button>
     </section>
-    <section>
+    <section id="pokeInfo">
         <div id="pokeId" class="text-center"></div>
         <div id="name" class="text-capitalize text-center"></div>
         <div id="sprite"></div>
-        <div id="moves" class="text-center">Moves: </div>
+        <div id="moves" class="text-center"></div>
+        <button id="prev" aria-label="startSearch" type="button">CHILD</button>
+        <div id="evolution" class="text-capitalize text-center"></div>
     </section>
 
 </main>
