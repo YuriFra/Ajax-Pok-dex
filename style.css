@@ -60,3 +60,13 @@ header{
 label{
     color: white;
 }
+
+#prev{
+    background-color: #3DC5E5;
+    border-color: #3DC5E5;
+}
+
+#next{
+    background-color: #F36156;
+    border-color: #F36156;
+}
