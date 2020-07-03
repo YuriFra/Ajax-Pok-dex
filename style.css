@@ -1,0 +1,62 @@
+
+body{
+    background-image: url("img/sky.jpg");
+}
+.input-field{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 200px;
+}
+
+header{
+    text-align: center;
+    width: auto;
+    height: 50px
+}
+
+/*.switch{
+    text-align: center;
+    margin-top: 50px;
+}*/
+
+.pokeId{
+    color: white;
+    z-index: 1;
+}
+
+#background{
+    background-image: url("img/switch.png");
+    background-size: cover;
+    width: auto;
+    height: 486px;
+    color: white;
+    padding-top: 80px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#pokeId {
+    z-index: 1;
+}
+
+#name{
+    z-index: 1;
+}
+
+#sprite{
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+#moves{
+    z-index: 1;
+}
+
+#pokemon{
+    width: 300px;
+}
+
+label{
+    color: white;
+}

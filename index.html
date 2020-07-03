@@ -16,26 +16,33 @@
     <title>Pokémon Game</title>
 </head>
 <body>
-<!-- Header -->
-<header>
-    <h1>POKEDEX</h1>
-</header>
-<!-- Main -->
-<main>
-    <section>
-        <label for="input">ID Pokémon</label>
-        <input id="input" type="text" autocomplete="off" name="poke" placeholder="ID or name">
-        <button id="button" aria-label="startSearch" type="button">GO</button>
-    </section>
-    <section id="pokeInfo">
-        <div id="pokeId" class="text-center"></div>
-        <div id="name" class="text-center"></div>
-        <div id="sprite"></div>
-        <div id="moves" class="text-center"></div>
-        <button id="prev" aria-label="startSearch" type="button">CHILD</button>
-        <div id="evolution" class="text-capitalize text-center"></div>
-    </section>
-</main>
+
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <span><img src="img/pokeball.png"></span><img src="img/pokemon.png" id="pokemon"><span><img src="img/pokeball.png"></span></h1>
+        <!--<img src="img/pokemon.png">-->
+    </header>
+    <!-- Main -->
+    <main>
+        <section class="input-field">
+            <input id="input" type="text" autocomplete="off" name="poke" placeholder="ID or Name Pokemon">
+            <button id="button" aria-label="startSearch" type="button" class="btn btn-danger">GO</button>
+        </section>
+
+        <section id="background">
+            <div class="img-text" id="img-photo">
+                <div id="pokeId" class="text-center"></div>
+                <div id="name" class="text-center"></div>
+                <div id="sprite"></div>
+                <div id="moves" class="text-center move"></div>
+            </div>
+        </section>
+
+
+    </main>
+</div>
 
 <!-- Script -->
 <script src="script.js"></script>
