@@ -45,22 +45,62 @@ const displayPokeChild = (pokeName) => {
             chainId = data.evolution_chain.url.split('/')[6];
             console.log(chainId);
         })
+    //.catch(error => console.error(error))
 }
 //fetch previous evolutions of poke
 document.getElementById('prev').addEventListener('click', () => {
     displayPokeChild(pokeName);
 })
-//.catch(error => console.error(error))
 
 // fetch next evolutions of poke
 document.getElementById('next').addEventListener('click', () => {
-    fetch(`https://pokeapi.co/api/v2/evolution-chain/${chainId}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokeName}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            console.log(data.chain.evolves_to[0].species.name);
-            //while (data.chain.evolves_to[0].length > 0) {}
+            if (data.evolution_chain === null) {
+                document.getElementById('name').innerHTML = `<span class="text-capitalize">${pokeName}</span> has no parent`;
+            } else {
+                chainId = data.evolution_chain.url.split('/')[6];
+                console.log(chainId);
+                fetch(`https://pokeapi.co/api/v2/evolution-chain/${chainId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        console.log(data.chain.evolves_to[0].species.name);
+                        //while (data.chain.evolves_to[0].length > 0) {}
+                        if (data.evolves_from_species === null) {
+                            document.getElementById('name').innerHTML = `<span class="text-capitalize">${pokeName}</span> is the parent`;
+                        } else {
+                            if (data.chain.evolves_to.length === 1) {
+                                pokeName = data.chain.evolves_to[0].species.name;
+                                displayPokeInfo(pokeName);
+                            }
+
+                        }
+
+                    })
+            }
         })
 })
 
 
+
+
+
+/*
+fetch(`https://pokeapi.co/api/v2/evolution-chain/${chainId}`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        console.log(data.chain.evolves_to[0].species.name);
+        //while (data.chain.evolves_to[0].length > 0) {}
+        if (data.evolves_from_species === null) {
+            document.getElementById('name').innerHTML = `<span class="text-capitalize">${pokeName}</span> is the parent`;
+        } else {
+            pokeName = data.chain.evolves_to[0].species.name;
+            displayPokeInfo(pokeName);
+        }
+    })
+
+ */
