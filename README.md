@@ -1,6 +1,10 @@
 # Ajax-Pok-dex
 Create a Pokédex game with JS
 
+Duo project from Said El Kharroubi & Yuri Franken
+
+[Check out our game.](https://yurifra.github.io/Ajax-Pok-dex/)
+
 ### Practical Information
 
 * Repository: `ajax-pokedex`
