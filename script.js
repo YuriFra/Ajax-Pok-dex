@@ -25,7 +25,6 @@ const displayPokeInfo = (pokeId) => {
             //.catch(error => console.error(error))
         })
 }
-// input poke name or ID and click to fetch poke info
 document.getElementById('button').addEventListener('click', () => {
     pokeId = document.getElementById('input').value;
     displayPokeInfo(pokeId);
@@ -69,7 +68,7 @@ const displayPokeParent = (pokeName) => {
                     if (evoTo.length === 0) {
                         document.getElementById('name').innerHTML = `<span class="text-capitalize">${pokeName}</span> has no evolution`;
                     } else {
-                        if (evoTo.length > 1 || evoTo[0].evolves_to.length > 1) {
+                        if (evoTo.length > 1) {
                             for (let i = 0; i < evoTo.length; i++) {
                                 multiEvo.push(evoTo[i].species.name);
                             }
@@ -81,7 +80,6 @@ const displayPokeParent = (pokeName) => {
                             }
                         } else if (evoTo[0].species.name === pokeName) {
                             pokeName2 = evoTo[0].evolves_to[0].species.name;
-                            console.log(pokeName2)
                             displayPokeInfo(pokeName2);
                         } else if (evoTo[0].evolves_to[0].species.name === pokeName && evoTo[0].evolves_to[0].evolves_to.length === 0) {
                             document.getElementById('name').innerHTML = `<span class="text-capitalize">${evoTo[0].evolves_to[0].species.name}</span> has no evolution`;
