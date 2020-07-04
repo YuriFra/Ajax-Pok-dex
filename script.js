@@ -20,6 +20,9 @@ const displayPokeInfo = (pokeId) => {
             moves.forEach(move => {
                 document.getElementById('moves').innerHTML += `<div class="move">${move.move.name}</div> `;
             })
+            document.getElementById('prev').innerHTML = `<button id="prev" aria-label="previousSearch" type="button" class="btn btn-primary">CHILD</button>`
+            document.getElementById('next').innerHTML = `<button id="next" aria-label="nextSearch" type="button" class="btn btn-danger">PARENT</button>`
+            //.catch(error => console.error(error))
         })
 }
 // input poke name or ID and click to fetch poke info
