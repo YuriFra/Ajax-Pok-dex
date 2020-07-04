@@ -42,7 +42,6 @@ const displayPokeChild = (pokeName) => {
         })
     .catch(error => console.error(error))
 }
-// click to fetch poke child
 document.getElementById('prev').addEventListener('click', () => {
     displayPokeChild(pokeName);
 })
@@ -67,7 +66,7 @@ const displayPokeParent = (pokeName) => {
                     if (evoTo.length === 0) {
                         document.getElementById('name').innerHTML = `<span class="text-capitalize">${pokeName}</span> has no evolution`;
                     } else {
-                        if (evoTo.length > 1) {
+                        if (evoTo.length > 1 || evoTo[0].evolves_to.length > 1) {
                             for (let i = 0; i < evoTo.length; i++) {
                                 multiEvo.push(evoTo[i].species.name);
                             }
@@ -84,7 +83,7 @@ const displayPokeParent = (pokeName) => {
                         } else if (evoTo[0].evolves_to[0].species.name === pokeName && evoTo[0].evolves_to[0].evolves_to.length === 0) {
                             document.getElementById('name').innerHTML = `<span class="text-capitalize">${evoTo[0].evolves_to[0].species.name}</span> has no evolution`;
                         }
-                        else if (evoTo){
+                        else {
                             pokeName1 = evoTo[0].species.name;
                             displayPokeInfo(pokeName1);
                         }
@@ -92,7 +91,6 @@ const displayPokeParent = (pokeName) => {
                 })
         })
 }
-
 document.getElementById('next').addEventListener('click', () => {
     displayPokeParent(pokeName);
 })
