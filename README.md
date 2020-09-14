@@ -1,16 +1,12 @@
 # Ajax-Pok-dex
-Create a Pokédex game with JS
-
-Duo project from Said El Kharroubi & Yuri Franken
-
-[Check out our game.](https://yurifra.github.io/Ajax-Pok-dex/)
-
-### Practical Information
+Creating a Pokédex game with JS
 
 * Repository: `ajax-pokedex`
-* Deadline: 2 days
-* Delivery: Github page (published)
-* Team: groups of 2
+* Deadline: `2 days`
+* Delivery: `Github page`
+* Team: `Said El Kharroubi (styling) & Yuri Franken (JS logic)`
+
+[Check out our game.](https://yurifra.github.io/Ajax-Pok-dex/)
 
 ### Learning Objectives
 
@@ -18,13 +14,13 @@ Duo project from Said El Kharroubi & Yuri Franken
 * **[JSON](https://www.w3schools.com/js/js_json_intro.asp)** (JavaScript Object Notation) format;
 * DOM manipulation: changing the DOM based on results of AJAX-requests.
 
-### Exercise
+### Challenge
 
 Make a [Pokédex](https://www.google.com/search?q=pokedex&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiRtNT3-vDfAhWDy6QKHd1cBD4Q_AUIDigB&biw=1300&bih=968#imgrc=_) using [this API](https://pokeapi.co/).
 
-Basic functionality that is expected (read: core features):
+Basic functionality:
 * You can search a pokémon by name and by ID
-* Of said pokémon you need to show:
+* Of this pokémon you need to show:
     * The ID-number
     * An image (sprite)
     * _At least_ 4 "moves"
@@ -32,10 +28,10 @@ Basic functionality that is expected (read: core features):
 
 Make your web page look like a pokédex by adding a little CSS.
 
-_Note: For this exercise, the goal is to keep working on it, until the deadline is reached. If you are finished adding all "core features", look at what else the API has to offer, and try adding some other features. At the end of the deadline, everyone is going to present the pokédex they made; As such it is important that you have published your web page on GitHub!_
-
-### Extra challenge
+### Extra
 There are a couple of pokemon that don't play with the normal rules, add code so their cases are also handled elegantly.
-
 - Ditto only has 1 move.
 - Eevee has 6 evolutions.
+
+   
+![pokedex](img/poke.png)
